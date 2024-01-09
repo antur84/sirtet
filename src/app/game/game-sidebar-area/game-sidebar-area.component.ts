@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ButtonComponent } from '@components/button/button.component';
 import { GameService } from '../game.service';
 
@@ -14,5 +14,13 @@ export class GameSidebarAreaComponent {
   pause = this.gameService.pause;
   resume = this.gameService.resume;
   isGameRunning = this.gameService.isGameRunning;
-  isGamePaused = this.gameService.isGamePaused;
+  toggleGameStateButtonText = computed(() => this.isGameRunning() ? 'Pause' : 'Resume');
+
+  toggleGameState = () => {
+    if (this.isGameRunning()) {
+      this.pause();
+    } else {
+      this.resume();
+    }
+  };
 }

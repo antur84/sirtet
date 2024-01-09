@@ -1,5 +1,2 @@
-@if(isGameRunning()){
-<app-button (click)="pause()">Pause</app-button>
-} @else if(isGamePaused()){
-<app-button (click)="resume()">Resume</app-button>
-}
+<app-button (click)="toggleGameState()">{{toggleGameStateButtonText()}}</app-button>
+
