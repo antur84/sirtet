@@ -3,8 +3,8 @@
 :host {
   display: flex;
   flex-direction: column;
-  width: calc(var(--blockSize) * 5);
-  height: calc(var(--blockSize) * 20);
+  width: calc(var(--blockSize) * var(--nrOfHorizontalBlocks) / 2 * 1px);
+  height: calc(var(--blockSize) * var(--nrOfVerticalBlocks) * 1px);
   border: 1px solid $color-primary;
   border-right: none;
 
