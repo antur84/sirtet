@@ -1,1 +1,6 @@
+@if(canStartNewGame()){
 <app-button (click)="startNewGame()">New game</app-button>
+}
+@else if(isGameRunning()){
+  running
+}
