@@ -1,0 +1,7 @@
+@use 'variables' as *;
+:host {
+  background-color: $midnight-green;
+}
+ol {
+  list-style: none;
+}
