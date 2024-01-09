@@ -1,9 +1,7 @@
 @use 'variables' as *;
 
 :host {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;;
   width: calc(var(--blockSize) * 10);
   height: calc(var(--blockSize) * 20);
   border: 1px solid $color-primary;

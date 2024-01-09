@@ -9,6 +9,4 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'sirtet';
-}
+export class AppComponent {}
