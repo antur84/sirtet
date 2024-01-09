@@ -2,6 +2,7 @@ import { ComponentRef, Injectable, ViewContainerRef, inject } from '@angular/cor
 import { CurrentShapeService } from './current-shape.service';
 import { GameAsset } from './game-asset';
 import { LShapeComponent } from './shapes/l-shape/l-shape.component';
+import { Shape } from './shapes/shape';
 
 @Injectable({ providedIn: 'root' })
 export class NextShapesQueueService implements GameAsset {
@@ -10,7 +11,7 @@ export class NextShapesQueueService implements GameAsset {
 
   private queue: ((
     viewContainerRef: ViewContainerRef
-  ) => ComponentRef<GameAsset>)[] = [];
+  ) => ComponentRef<Shape>)[] = [];
 
   constructor() {
     // First shape comes from here.

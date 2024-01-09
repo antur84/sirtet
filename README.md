@@ -14,7 +14,9 @@ npm run start
 * Shapes should have different colors, maybe inline border and background or something nice.
 * Random shape each game start.
 * Visualize the current shapes that are in queue to come next.
-* Make current shape move down during game ticks
+* Make current shape move down during game ticks ✅
+* Limit shape movement to game area
+* Introduce difficulty, like speed
 * Allow user control of current shape left and right.
 * Allow user control of downward speed.
 * Allow user control of downward instant drop by pressing space.

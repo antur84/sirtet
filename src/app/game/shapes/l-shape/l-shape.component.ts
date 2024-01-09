@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GameAsset } from 'app/game/game-asset';
+import { Shape } from '../shape';
 
 @Component({
   selector: 'app-l-shape',
@@ -7,14 +7,18 @@ import { GameAsset } from 'app/game/game-asset';
   imports: [],
   templateUrl: './l-shape.component.html',
   styleUrl: './l-shape.component.scss',
+  host: {
+    '[style.--top]': 'top',
+  },
 })
-export class LShapeComponent implements GameAsset {
-  priuvate
+export class LShapeComponent implements Shape {
+  top = 0;
+
   tick = () => {
-    console.log('lshapre');
+    console.log('lshapre', this.top);
   };
 
-  move = ({ x, y }: { x: number; y: number }) => {
-    console.log('move', x, y);
+  moveDown = () => {
+    this.top++;
   };
 }
