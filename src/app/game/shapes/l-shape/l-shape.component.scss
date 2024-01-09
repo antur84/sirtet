@@ -1,8 +1,10 @@
 @use 'variables' as *;
 :host {
   --top: 0;
+  --left: 0;
   position: absolute;
   top: calc(var(--blockSize) * var(--top) * 1px);
+  left: calc(var(--blockSize) * var(--left) * 1px);
 }
 
 div {

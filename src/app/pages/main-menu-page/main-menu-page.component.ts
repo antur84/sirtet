@@ -1,7 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { ButtonComponent } from '@components/button/button.component';
 import { GameAreaComponent } from 'app/game/game-area/game-area.component';
-import { GameSettings } from 'app/game/game-settings';
+import { gameSettings } from 'app/game/game-settings';
 import { GameSidebarAreaComponent } from 'app/game/game-sidebar-area/game-sidebar-area.component';
 import { GameService } from 'app/game/game.service';
 
@@ -31,11 +31,3 @@ export class MainMenuPageComponent {
   };
 }
 
-const gameSettings = new Map<
-  keyof GameSettings,
-  GameSettings[keyof GameSettings]
->([
-  ['blockSize', 40],
-  ['nrOfHorizontalBlocks', 10],
-  ['nrOfVerticalBlocks', 20],
-]);
