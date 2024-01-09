@@ -1,7 +1,10 @@
 @use 'variables' as *;
 :host {
   background-color: $midnight-green;
+  padding: 10px;
 }
-ol {
-  list-style: none;
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
