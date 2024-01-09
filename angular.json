@@ -30,9 +30,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/style/styles.scss",
+              "src/style/reset.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -90,9 +96,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/style/styles.scss",
+              "src/style/reset.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style"
+              ]
+            }
           }
         }
       }
