@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { GameAsset } from './game-asset';
 import { GameEngine } from './game-engine';
 
 @Injectable({ providedIn: 'root' })
 export class GameService {
+  private gameAssets: GameAsset[] = [];
   private engine = new GameEngine();
   canStartNewGame = this.engine.isGameState('not-started');
   isGameRunning = this.engine.isGameState('running');
@@ -14,11 +16,11 @@ export class GameService {
       return;
     }
 
-    this.engine.startNewGame();
+    this.engine.startNewGame(this.doEachGameTick);
   };
 
   pause = () => {
-    if(!this.canPauseGame()) {
+    if (!this.canPauseGame()) {
       return;
     }
 
@@ -26,10 +28,16 @@ export class GameService {
   };
 
   resume = () => {
-    if(!this.canResumeGame()) {
+    if (!this.canResumeGame()) {
       return;
     }
 
     this.engine.resumeGame();
+  };
+
+  private doEachGameTick = () => {
+    for (const asset of this.gameAssets) {
+      asset.tick();
+    }
   };
 }

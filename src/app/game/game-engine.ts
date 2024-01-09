@@ -3,14 +3,16 @@ import { computed, signal } from '@angular/core';
 export class GameEngine {
   private state = signal<GameState>('not-started');
   private loop: ReturnType<typeof createGameLoop>;
+  private gameTick: () => void;
 
-  startNewGame = () => {
+  startNewGame = (gameTick: () => void) => {
     this.state.set('running');
+    this.gameTick = gameTick;
     if (!this.loop) {
       this.loop = createGameLoop();
     }
 
-    this.loop.start();
+    this.loop.start(gameTick);
   };
 
   pauseGame = () => {
@@ -20,7 +22,7 @@ export class GameEngine {
 
   resumeGame = () => {
     this.state.set('running');
-    this.loop.start();
+    this.loop.start(this.gameTick);
   };
 
   isGameState = (state: GameState) => computed(() => this.state() === state);
@@ -33,10 +35,8 @@ const createGameLoop = () => {
 
   let idOfStartedLoop: number;
 
-  const start = () => {
-    idOfStartedLoop = window.setInterval(function () {
-      console.log('tick');
-    }, sixtyFramesPerSecond);
+  const start = (gameTick: () => void) => {
+    idOfStartedLoop = window.setInterval(gameTick, sixtyFramesPerSecond);
   };
 
   const stop = () => {

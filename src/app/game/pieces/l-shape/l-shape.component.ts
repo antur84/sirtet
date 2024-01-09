@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameAsset } from 'app/game/game-asset';
 
 @Component({
   selector: 'app-l-shape',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   templateUrl: './l-shape.component.html',
   styleUrl: './l-shape.component.scss'
 })
-export class LShapeComponent {
-
+export class LShapeComponent implements GameAsset {
+  tick = () => {
+    console.log('lshapre');
+  };
 }
