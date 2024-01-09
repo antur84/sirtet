@@ -10,7 +10,7 @@ npm run start
 
 ### TODO
 
-There's a lot of stuff missing. 
+There's a lot of stuff missing, here's a list of ideas
 
 * Make current shape move down during game ticks ✅
 * Borders per shape are sometimes doubled, they should not be.
@@ -30,3 +30,10 @@ There's a lot of stuff missing.
 * Point system, score when rows are cleared, rows are cleared given a full line and current stops moving.
 * High score
 * Game state persistance.
+
+
+### Screenshot of app
+
+![screenshot](screenshot.png "Screenshot of app")
+
+
