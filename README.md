@@ -21,3 +21,5 @@ npm run start
 * Allow user control of current shape rotation.
 * Make current shape collision detect.
 * Point system, score when rows are cleared, rows are cleared given a full line and current stops moving.
+* High score
+* Game state persistance.
