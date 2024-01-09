@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GameEngine } from './game-engine';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class GameService {
   private engine = new GameEngine();
   canStartNewGame = this.engine.isGameState('not-started');
