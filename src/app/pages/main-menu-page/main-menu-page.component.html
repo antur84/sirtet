@@ -1,7 +1,7 @@
 @if(canStartNewGame()){
 <app-button (click)="startNewGame()">New game</app-button>
 }
-@else if(isGameRunning()){
+@else if(isGameStarted()){
   <app-game-sidebar-area></app-game-sidebar-area>
   <app-game-area></app-game-area>
 }

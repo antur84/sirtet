@@ -1,1 +1,5 @@
-<p>game-sidebar-area works!</p>
+@if(isGameRunning()){
+<app-button (click)="pause()">Pause</app-button>
+} @else if(isGamePaused()){
+<app-button (click)="resume()">Resume</app-button>
+}
