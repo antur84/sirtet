@@ -1,10 +1,10 @@
 <nav>
   <ul>
     <li>
-      <h1><app-button routerLink="/">Main menu</app-button></h1>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Main menu</a>
     </li>
     <li>
-      <h1><app-button routerLink="/highscore">Highscore</app-button></h1>
+      <a routerLink="/highscore" routerLinkActive="active" >Highscore</a>
     </li>
   </ul>
 </nav>

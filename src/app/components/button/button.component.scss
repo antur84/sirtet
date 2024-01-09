@@ -10,4 +10,8 @@ button {
     color: $color-bg;
     cursor: pointer;
   }
+
+  &:focus-within {
+    outline: 2px solid $color-primary;
+  }
 }

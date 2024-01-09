@@ -8,4 +8,8 @@ import { ButtonComponent } from '@components/button/button.component';
   templateUrl: './main-menu-page.component.html',
   styleUrl: './main-menu-page.component.scss',
 })
-export class MainMenuPageComponent {}
+export class MainMenuPageComponent {
+  startNewGame = () => {
+    console.log('startNewGame');
+  }
+}

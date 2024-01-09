@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ButtonComponent } from '@components/button/button.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
   standalone: true,
-  imports: [RouterLink, ButtonComponent],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './main-menu.component.html',
   styleUrl: './main-menu.component.scss'
 })
