@@ -1,4 +1,5 @@
 import { Injectable, inject } from '@angular/core';
+import { CurrentShapeService } from './current-shape.service';
 import { GameAsset } from './game-asset';
 import { GameEngine } from './game-engine';
 import { NextShapesQueueService } from './next-shapes-queue.service';
@@ -6,8 +7,9 @@ import { NextShapesQueueService } from './next-shapes-queue.service';
 @Injectable({ providedIn: 'root' })
 export class GameService {
   private nextShapesQueueService = inject(NextShapesQueueService);
+  private currentShapeService = inject(CurrentShapeService);
 
-  private gameAssets: GameAsset[] = [this.nextShapesQueueService];
+  private gameAssets: GameAsset[] = [this.nextShapesQueueService, this.currentShapeService];
   private engine = new GameEngine();
 
   canStartNewGame = this.engine.isGameState('not-started');
