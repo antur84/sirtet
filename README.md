@@ -11,3 +11,4 @@ npm run start
 ### TODO
 
 * Borders per shape are sometimes doubled
+* Shapes should have different colors
